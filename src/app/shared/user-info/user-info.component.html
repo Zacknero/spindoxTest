@@ -1,0 +1,28 @@
+<section class="user-info-section">
+
+  <div class="info-user-section">
+    <div class="label">{{userLabel?.label}}</div>
+    <div class="text">{{userLabel?.text}}</div>
+  </div>
+
+  <div class="icon-user-section">
+    <fa-icon [icon]="faUser" [size]="sizeFont" (mouseover)="getTypeInfoUser('name',userRandom?.name)"
+             [style.color]="getColor('name')">
+    </fa-icon>
+    <fa-icon [icon]="faVoicemail" [size]="sizeFont" (mouseover)="getTypeInfoUser('email',userRandom?.email)"
+             [style.color]="getColor('email')">
+    </fa-icon>
+    <fa-icon [icon]="faCalendar" [size]="sizeFont" (mouseover)="getTypeInfoUser('calendar',userRandom?.dob)"
+             [style.color]="getColor('calendar')">
+    </fa-icon>
+    <fa-icon [icon]="faMapMarked" [size]="sizeFont" [style.color]="getColor('map')"
+             (mouseover)="getTypeInfoUser('map',userRandom?.location?.street)">
+    </fa-icon>
+    <fa-icon [icon]="faMicrophone" [size]="sizeFont" (mouseover)="getTypeInfoUser('cell',userRandom?.phone)"
+             [style.color]="getColor('cell')">
+    </fa-icon>
+    <fa-icon [icon]="faLock" [size]="sizeFont" (mouseover)="getTypeInfoUser('psw',userRandom?.login)"
+             [style.color]="getColor('psw')">
+    </fa-icon>
+  </div>
+</section>
